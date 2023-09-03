@@ -28,14 +28,25 @@ header.style.borderBottom="solid 3px #000"
 
 //get elements by class name
 
-// var items=document.getElementsByClassName("list-group-item")
+ var items=document.getElementsByClassName("list-group-item")
 // console.log(items)
-// //console.log(items[1])
-// items[1].textContent="hello2"
+console.log(items[1])
+ items[1].textContent="hello2"
+ items[2].style.backgroundColor="green"
 var itemhead=document.getElementsByClassName("title")
 //console.log(itemhead)
 itemhead[0].style.fontWeight = "bold";
 itemhead[0].style.color = "green";
+
+for(let i=0;i<items.length;i++)
+{
+    items[i].style.fontWeight="bold"
+}
+
+
+
+
+
 
 
 
