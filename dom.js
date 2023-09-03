@@ -28,22 +28,51 @@ header.style.borderBottom="solid 3px #000"
 
 //get elements by class name
 
- var items=document.getElementsByClassName("list-group-item")
-// console.log(items)
-console.log(items[1])
- items[1].textContent="hello2"
- items[2].style.backgroundColor="green"
-var itemhead=document.getElementsByClassName("title")
-//console.log(itemhead)
-itemhead[0].style.fontWeight = "bold";
-itemhead[0].style.color = "green";
+//  var items=document.getElementsByClassName("list-group-item")
+// // console.log(items)
+// console.log(items[1])
+//  items[1].textContent="hello2"
+//  items[2].style.backgroundColor="green"
+// var itemhead=document.getElementsByClassName("title")
+// //console.log(itemhead)
+// itemhead[0].style.fontWeight = "bold";
+// itemhead[0].style.color = "green";
 
-for(let i=0;i<items.length;i++)
-{
-    items[i].style.fontWeight="bold"
-}
+// for(let i=0;i<items.length;i++)
+// {
+//     items[i].style.fontWeight="bold"
+// }
+
+// get element by tagname
+
+// var li=document.getElementsByTagName("li")
+// // console.log(li)
+// console.log(li)
+// console.log(li[1])
+
+//  li[1].textContent="hello2"
+//  li[2].style.backgroundColor="green"
+// var itemhead=document.getElementsByTagName("title")
+// //console.log(itemhead)
+// itemhead[0].style.fontWeight = "bold";
+// itemhead[0].style.color = "green";
+
+// for(let i=0;i<items.length;i++)
+// {
+//     li[i].style.fontWeight="bold"
+// }
+
+var itema=document.getElementsByClassName("list-group-b")
+console.log(itema)
+itema[0].style.fontWeight="bold"
 
 
+
+ li=document.getElementsByTagName("li");
+console.log(li)
+li[4].style.backgroundColor="red"
+
+ 
 
 
 
