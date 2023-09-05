@@ -111,25 +111,112 @@ header.style.borderBottom="solid 3px #000"
 //  }
  
 
-var li=document.getElementsByTagName("li")
-console.log(li)
-li[1].style.backgroundColor="red"
-li[2].style.display="none"
+// var li=document.getElementsByTagName("li")
+// console.log(li)
+// li[1].style.backgroundColor="red"
+// li[2].style.display="none"
 
 
 
-// var secondItem=document.querySelector('.list-group-item:nth-child(2)');
-//  secondItem.style.color="green"
+// // var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+// //  secondItem.style.color="green"
 
-  var odd=document.querySelectorAll('li:nth-child(odd)')
-  for(var i=0;i<odd.length;i++)
- {
-    odd[i].style.backgroundColor='green'
+//   var odd=document.querySelectorAll('li:nth-child(odd)')
+//   for(var i=0;i<odd.length;i++)
+//  {
+//     odd[i].style.backgroundColor='green'
     
- }
+//  }
+
+// TRAVERSING THE DOM
+var itemList=document.querySelector('#items')
+
+//parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor="#f4f4f4"
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// //parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor="#f4f4f4"
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+
+//childNodes
+// console.log(itemList.childNodes)
+
+// //children
+// console.log(itemList.children)
+// itemList.children[1].style.backgroundColor="yellow"
+
+
+// // first Child
+// console.log(itemList.firstChild)
+// // first ElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent="hello 1"
+
+
+// // lastChild
+// console.log(itemList.lastChild)
+// // lastElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent="hello 4"
 
 
 
+// //nextSibling
+// console.log(itemList.nextSibling)
+// //nextElementSibling
+// console.log(itemList.nextElementSibling)
+
+
+
+
+// //previousSibling
+// console.log(itemList.previousSibling)
+// //previousElementSibling
+// console.log(itemList.previousElementSibling)
+// itemList.previousElementSibling.style.color="green"
+
+//creatElement
+
+//creat a div
+var newDiv=document.createElement('div')
+
+//add class
+newDiv.className='hello';
+//add id
+newDiv.id='hello1';
+
+//add attribute(attribute u want,value)
+newDiv.setAttribute('title',"hello div");
+
+
+//creat text Node
+var newDivText=document.createTextNode('HELLO WORLD');
+
+//add text to div
+newDiv.appendChild(newDivText);
+
+var textH=document.querySelector('header .container');
+var h1=document.querySelector('header h1')
+//ar h2=document.querySelector('h2 ul')
+
+
+console.log(newDiv);
+
+newDiv.style.fontSize="30px"
+textH.insertBefore(newDiv,h1)
+
+
+var ulElement = document.querySelector('#items');
+let newli=document.createElement("li");
+newli.className="list-group-item"
+newli.textContent='HELLO'
+let firstLi=ulElement.querySelector("li")
+
+ulElement.insertBefore(newli, firstLi)
 
 
 
