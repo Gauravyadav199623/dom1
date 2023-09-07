@@ -13,6 +13,17 @@ itemlist.addEventListener('click', removeItem)
 filter.addEventListener('keyup', filterItems)
 
 
+// edit button to existing ones
+var listItems = document.querySelectorAll('#items .list-group-item');
+listItems.forEach(function(li) {
+    // Create the "Edit" button
+    var editBtn = document.createElement('button');
+    editBtn.className = 'btn btn-sm float-right edit';
+    editBtn.appendChild(document.createTextNode("Edit"));
+  
+    // Append the "Edit" button to the current list item
+    li.appendChild(editBtn);
+  });
 
 //add item
 function addItem(e){
@@ -63,23 +74,14 @@ li.appendChild(deleteBtn)
 
 
 
-// edit button
+// edit button to new added element
 var listItems = document.querySelectorAll('#items .list-group-item');
 var editBtn = document.createElement('button');
   editBtn.className = 'btn btn-sm float-right edit';
   editBtn.appendChild(document.createTextNode("Edit"));
   li.appendChild(editBtn);
 
-// Iterate over each list item
-listItems.forEach(function(li) {
-  // Create the "Edit" button
-  var editBtn = document.createElement('button');
-  editBtn.className = 'btn btn-sm float-right edit';
-  editBtn.appendChild(document.createTextNode("Edit"));
 
-  // Append the "Edit" button to the current list item
-  li.appendChild(editBtn);
-});
 
 
 
@@ -117,8 +119,10 @@ function filterItems(e){
     //convert to array
     Array.from(items).forEach(function(item){
         var itemName=item.firstChild.textContent;
+        var description=item.childNodes[1].textContent;
+
         
-        if(itemName.toLowerCase().indexOf(text)!=-1){
+        if(itemName.toLowerCase().indexOf(text)!=-1  || description.toLowerCase().indexOf(text)!=-1){
             item.style.display="block"
         }else{
             item.style.display='none'
